@@ -1,0 +1,31 @@
+/* Buttons */
+button.btn {
+  padding: 14px 40px;
+  border-radius: 2px;
+  line-height: 20px;
+  font-weight:500;
+  &--orange {
+    background-color: var(--color-orange-100);
+    color: var(--color-orange-600);
+    @include hover-background-orange-200;
+  }
+
+  &--gray {
+    background-color: var(--color-gray-100);
+    color: var(--color-black-200);
+    font-weight: 500;
+    @include hover-background-gray-200;
+  }
+
+  &--lg {
+    padding: 18px 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width:568px){
+  button.btn{
+    padding:14px 32px;
+    font-size:14px;
+  }
+}

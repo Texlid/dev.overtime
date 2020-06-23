@@ -1,0 +1,74 @@
+/* Breadcrumbs */
+.breadcrumbs {
+  width: 1208px;
+  margin: 0 auto;
+  @include grid-default();
+  padding-top: 28px;
+  padding-bottom: 28px;
+  @include list-axis-x();
+  li {
+    span {
+      display:inline-block;
+      font-size: 13px;
+      line-height: 16px;
+    }
+    & > a {
+      display:inline-block;
+      &:after{
+        content:'\00a0\00a0/\00a0\00a0';
+        color:var(--color-black-600);
+      }
+      &:hover{
+        span{
+          transition:color .2s ease-out;
+          color:var(--color-orange-100);
+        }
+      }
+      span {
+        color: var(--color-black-600);
+        transition:color .2s ease-in;
+      }
+    }
+    & > span {
+      color: var(--color-black-100);
+    }
+  }
+}
+
+@media (max-width:568px){
+  .breadcrumbs {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing:border-box;
+    @include grid-mobile();
+    padding:16px 24px;
+    border-bottom:1px solid var(--color-gray-200);
+    li {
+      display:none;
+      &:nth-last-child(2){
+        display:inline-block;
+        & > a{
+          padding-left:32px;
+          position:relative;
+          span{
+            white-space:nowrap;
+          }
+          &:before{
+            content:'';
+            display:block;
+            width:21px;
+            height:12px;
+            background:transparent url("../img/bc-arrow.svg") no-repeat;
+            position:absolute;
+            top:50%;
+            left:0;
+            transform:translate3d(0,-50%,0);
+          }
+          &:after{
+            content:none;
+          }
+        }
+      }
+    }
+  }
+}

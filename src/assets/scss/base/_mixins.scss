@@ -1,0 +1,70 @@
+/* Mixins */
+@mixin list-axis-x {
+  display:flex;
+  flex-direction:row;
+}
+
+@mixin list-axis-y {
+  display:flex;
+  flex-direction:column;
+}
+
+@mixin grid-default {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, .83fr));
+  column-gap: 40px;
+}
+
+@mixin grid-mobile {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+@mixin hover-color-orange-100 {
+  transition:color .2s ease-in;
+  &:hover{
+    transition:color .2s ease-out;
+    color:var(--color-orange-100);
+  }
+}
+
+@mixin hover-color-black-100 {
+  transition:color .2s ease-in;
+  &:hover{
+    transition:color .2s ease-out;
+    color:var(--color-black-100);
+  }
+}
+
+@mixin hover-color-black-400 {
+  transition:color .2s ease-in;
+  &:hover{
+    transition:color .2s ease-out;
+    color:var(--color-black-400);
+  }
+}
+
+@mixin hover-background-black-400 {
+  transition: background-color .3s ease-out;
+  &:hover{
+    transition:background-color .3s ease-in;
+    background-color: var(--color-black-400);
+  }
+}
+
+@mixin hover-background-gray-200 {
+  transition: background-color .3s ease-out;
+  &:hover{
+    transition:background-color .3s ease-in;
+    background-color: var(--color-gray-200);
+  }
+}
+
+@mixin hover-background-orange-200 {
+  transition: background-color .3s ease-in;
+  &:hover{
+    transition:background-color .3s ease-out;
+    background-color: var(--color-orange-200);
+  }
+}

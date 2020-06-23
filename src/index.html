@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/main.js"></script>
+
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon/favicon-48x48.png">
+    <link rel="manifest" href="assets/img/favicon/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="Овертайм">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/img/favicon/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="assets/img/favicon/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Овертайм">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"    href="assets/img/favicon/apple-touch-startup-image-640x1136.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"    href="assets/img/favicon/apple-touch-startup-image-750x1334.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"    href="assets/img/favicon/apple-touch-startup-image-828x1792.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"    href="assets/img/favicon/apple-touch-startup-image-1125x2436.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"    href="assets/img/favicon/apple-touch-startup-image-1242x2208.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"    href="assets/img/favicon/apple-touch-startup-image-1242x2688.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"   href="assets/img/favicon/apple-touch-startup-image-1536x2048.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"   href="assets/img/favicon/apple-touch-startup-image-1668x2224.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"   href="assets/img/favicon/apple-touch-startup-image-1668x2388.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"  href="assets/img/favicon/apple-touch-startup-image-2048x2732.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"  href="assets/img/favicon/apple-touch-startup-image-1620x2160.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"   href="assets/img/favicon/apple-touch-startup-image-1136x640.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"   href="assets/img/favicon/apple-touch-startup-image-1334x750.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"   href="assets/img/favicon/apple-touch-startup-image-1792x828.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"   href="assets/img/favicon/apple-touch-startup-image-2436x1125.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"   href="assets/img/favicon/apple-touch-startup-image-2208x1242.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"   href="assets/img/favicon/apple-touch-startup-image-2688x1242.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"  href="assets/img/favicon/apple-touch-startup-image-2048x1536.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"  href="assets/img/favicon/apple-touch-startup-image-2224x1668.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"  href="assets/img/favicon/apple-touch-startup-image-2388x1668.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/img/favicon/apple-touch-startup-image-2732x2048.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"  href="assets/img/favicon/apple-touch-startup-image-2160x1620.png">
+    <link rel="icon" type="image/png" sizes="228x228" href="assets/img/favicon/coast-228x228.png">
+    <meta name="msapplication-TileColor" content="transparent">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="assets/img/favicon/browserconfig.xml">
+    <link rel="yandex-tableau-widget" href="assets/img/favicon/yandex-browser-manifest.json">
+
+</head>
+<body>
+
+
+<header class="header">
+    <div class="header-bar-wrap">
+        <div class="header-bar">
+            <div class="header-bar-en">
+                <i>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.99999 16C3.58427 16 0 12.4087 0 8C0 3.59127 3.59125 0 7.99999 0C12.4087 0 16 3.59127 16 8C16 12.4087 12.4087 16 7.99999 16ZM7.99999 1.32751C4.32488 1.32751 1.32751 4.3179 1.32751 8C1.32751 11.6821 4.31789 14.6725 7.99999 14.6725C11.6821 14.6725 14.6725 11.6821 14.6725 8C14.6725 4.3179 11.6751 1.32751 7.99999 1.32751Z" fill="#F2542C"/>
+                        <path d="M8.66623 11.331H7.33173V7.3345H6.66797V6H8.66623V11.331Z" fill="#F2542C"/>
+                        <path d="M9.33697 10.668H6.66797V12.0025H9.33697V10.668Z" fill="#F2542C"/>
+                        <path d="M8.66263 3.99609H7.32812V5.33058H8.66263V3.99609Z" fill="#F2542C"/>
+                    </svg>
+                </i>
+                <a href="">About company</a>
+            </div>
+            <nav class="header-bar-nav">
+                <ul>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Поставщики</a></li>
+                    <li><a href="">Доставка и оплата</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-bar-account">
+                <i>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.93178 9.26201C5.38057 9.26201 3.30078 7.18222 3.30078 4.63101C3.30078 2.07979 5.38057 0 7.93178 0C10.483 0 12.5628 2.07979 12.5628 4.63101C12.5628 7.18222 10.483 9.26201 7.93178 9.26201ZM7.93178 1.32413C6.1085 1.32413 4.62492 2.80772 4.62492 4.63101C4.62492 6.45429 6.1085 7.93788 7.93178 7.93788C9.75507 7.93788 11.2386 6.45429 11.2386 4.63101C11.2386 2.80772 9.75507 1.32413 7.93178 1.32413Z" fill="#F2542C"/>
+                        <path d="M14.5586 16.0002L14.302 14.579C13.7405 11.5009 11.0645 9.26163 7.93095 9.26163C4.79739 9.26163 2.12139 11.5009 1.55984 14.579L1.30334 16.0002L0 15.7645L0.256504 14.3433C0.928971 10.6343 4.15959 7.9375 7.93095 7.9375C11.7023 7.9375 14.926 10.6274 15.6054 14.3433L15.8619 15.7645L14.5586 16.0002Z" fill="#F2542C"/>
+                    </svg>
+                </i>
+                <a href="">Личный кабинет</a>
+            </div>
+            <div class="header-bar-store">
+                <a href="">Перейти в магазин</a>
+            </div>
+        </div>
+    </div>
+    <div class="header-data">
+        <div class="header-data-logo">
+            <a href="../">
+                <img src="assets/img/logo.png" alt="Овертайм, электротехническое оборудование для промышленности">
+            </a>
+            <span>Электротехническое оборудование для промышленности</span>
+        </div>
+        <div class="header-data-phones">
+            <a href="" class="header-data-phone">
+                <span>8 (812) 327-34-86</span>
+                <span>Санкт-Петербург</span>
+            </a>
+            <a href="" class="header-data-phone">
+                <span>8 (495) 961-02-07</span>
+                <span>Москва</span>
+            </a>
+            <a href="" class="header-data-phone">
+                <span>8 (800) 775-47-83</span>
+                <span>Бесплатно по РФ</span>
+            </a>
+        </div>
+        <a class="header-cart" href="#">
+            <i class="header-cart-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 18H0V5.79834L3.31558 0H14.6844L18 5.79834V18V18ZM1.50066 16.5072H16.4993V6.20689L13.8123 1.5085H4.17982L1.49279 6.20689V16.5072H1.50066Z" fill="#191A1A"/>
+                    <path d="M5.98569 13.5078H2.98438V15.0085H5.98569V13.5078Z" fill="#191A1A"/>
+                    <path d="M9.76628 0.746094H8.26562V8.99577H9.76628V0.746094Z" fill="#191A1A"/>
+                    <path d="M17.2454 5.26562H0.746094V6.76628H17.2454V5.26562Z" fill="#191A1A"/>
+                </svg>
+            </i>
+            <span class="header-cart-name">Корзина</span>
+            <span class="header-cart-total">687.55&nbsp;₽</span>
+            <span class="header-cart-count">1</span>
+        </a>
+    </div>
+    <div class="header-nav-border">
+        <div class="header-nav-wrap">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="">Rittal</a></li>
+                    <li><a href="">Alfra</a></li>
+                    <li><a href="">Delta</a></li>
+                    <li><a href="">DKC</a></li>
+                    <li><a href="">Eldon</a></li>
+                    <li><a href="">Vertiv</a></li>
+                    <li><a href="">Sedus</a></li>
+                    <li><a href="">Phoenix&nbsp;Contact</a></li>
+                    <li><a href="">Heitec</a></li>
+                    <li><a href="">Schroff</a></li>
+                    <li><a href="">Remer</a></li>
+                    <li><a href="">Провенто</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <form action="">
+                    <input id="header-search" type="text" placeholder="Поиск...">
+                    <i>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.07273 12.1455C2.72177 12.1455 0 9.42369 0 6.07273C0 2.72177 2.72177 0 6.07273 0C9.42369 0 12.1455 2.72177 12.1455 6.07273C12.1455 9.41662 9.42369 12.1455 6.07273 12.1455ZM6.07273 1.34321C3.47114 1.34321 1.35027 3.46407 1.35027 6.06566C1.35027 8.66725 3.47114 10.7881 6.07273 10.7881C8.67432 10.7881 10.7952 8.66725 10.7952 6.06566C10.8022 3.46407 8.68139 1.34321 6.07273 1.34321Z" fill="#F2542C"/>
+                            <path d="M10.2673 9.30304L9.3125 10.2578L15.0463 15.9914L16.0011 15.0367L10.2673 9.30304Z" fill="#F2542C"/>
+                        </svg>
+                    </i>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header class="header-m">
+    <div class="header-m-data">
+        <div class="header-m-data-logo">
+            <a href="">
+                <img src="assets/img/logo.png" alt="Овертайм, электротехническое оборудование для промышленности">
+            </a>
+        </div>
+        <div class="header-m-data-nav">
+            <a class="header-m-cart">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 24H4V11.7983L7.31558 6H18.6844L22 11.7983V24V24ZM5.50066 22.5072H20.4993V12.2069L17.8123 7.5085H8.17982L5.49279 12.2069V22.5072H5.50066Z" fill="#191A1A"/>
+                    <path d="M9.98569 19.5078H6.98438V21.0085H9.98569V19.5078Z" fill="#191A1A"/>
+                    <path d="M13.7663 6.74609H12.2656V14.9958H13.7663V6.74609Z" fill="#191A1A"/>
+                    <path d="M21.2454 11.2656H4.74609V12.7663H21.2454V11.2656Z" fill="#191A1A"/>
+                </svg>
+                <span class="header-m-cart-count">1</span>
+            </a>
+            <a class="header-m-search">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.8316 19.6631C12.0619 19.6631 9 16.6012 9 12.8316C9 9.06188 12.0619 6 15.8316 6C19.6012 6 22.6631 9.06188 22.6631 12.8316C22.6631 16.5933 19.6012 19.6631 15.8316 19.6631ZM15.8316 7.51106C12.9049 7.51106 10.519 9.89693 10.519 12.8236C10.519 15.7503 12.9049 18.1362 15.8316 18.1362C18.7582 18.1362 21.1441 15.7503 21.1441 12.8236C21.1521 9.89693 18.7662 7.51106 15.8316 7.51106Z" fill="#191A1A"/>
+                    <path d="M20.5507 16.465L19.4766 17.5391L25.9268 23.9891L27.0009 22.9151L20.5507 16.465Z" fill="#191A1A"/>
+                </svg>
+            </a>
+            <div class="header-m-burger" data-object="modal-trigger" data-modal="mobile-nav">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="12" y1="9.2" x2="32" y2="9.2" stroke="#191A1A" stroke-width="1.6"/>
+                    <line x1="12" y1="21.2" x2="32" y2="21.2" stroke="#191A1A" stroke-width="1.6"/>
+                    <line x1="22" y1="15.2" x2="32" y2="15.2" stroke="#191A1A" stroke-width="1.6"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="header-m-phones">
+        <a href="" class="header-m-phone">
+            <span>8 (812) 327-34-86</span>
+        </a>
+        <a href="" class="header-m-phone">
+            <span>8 (495) 961-02-07</span>
+        </a>
+        <a href="" class="header-m-phone">
+            <span>8 (800) 775-47-83</span>
+        </a>
+    </div>
+</header>
+
+<div class="search-results">
+    <a class="search-result" href="">
+        <div class="search-result-media">
+            <img src="https://overtime.ru/upload/resize_cache/iblock/df6/340_340_140cd750bba9870f18aada2478b24840a/df649a49b113985f4195ed955efa4b49.jpg" alt="">
+        </div>
+        <span class="search-result-name">Соединительный элемент PSD-S CE-SM SPRING Phoenix Contact арт. Ф-2700091</span>
+        <div class="search-result-price">
+            <span>2&nbsp;084.49</span>
+            <span>&nbsp;₽&nbsp;</span>
+            <span>/&nbsp;шт.</span>
+        </div>
+        <div class="search-result-discount">
+            <span>-10%, экономия 12377 ₽</span>
+        </div>
+    </a>
+    <a class="search-result" href="">
+        <div class="search-result-media">
+            <img src="https://overtime.ru/upload/resize_cache/iblock/df6/340_340_140cd750bba9870f18aada2478b24840a/df649a49b113985f4195ed955efa4b49.jpg" alt="">
+        </div>
+        <span class="search-result-name">Сверло, HSS-CoTIN, 8,0 Alfra арт. 10015</span>
+        <div class="search-result-price">
+            <span>2&nbsp;084.49</span>
+            <span>&nbsp;₽&nbsp;</span>
+            <span>/&nbsp;шт.</span>
+        </div>
+        <div class="search-result-discount">
+            <span>-10%, экономия 12377 ₽</span>
+        </div>
+    </a>
+    <a class="search-result" href="">
+        <div class="search-result-media">
+            <img src="https://overtime.ru/upload/resize_cache/iblock/df6/340_340_140cd750bba9870f18aada2478b24840a/df649a49b113985f4195ed955efa4b49.jpg" alt="">
+        </div>
+        <span class="search-result-name">Сверло, HSS-CoTIN, 8,0 Alfra арт. 10014</span>
+        <div class="search-result-price">
+            <span>2&nbsp;084.49</span>
+            <span>&nbsp;₽&nbsp;</span>
+            <span>/&nbsp;шт.</span>
+        </div>
+        <div class="search-result-discount">
+            <span>-10%, экономия 12377 ₽</span>
+        </div>
+    </a>
+    <a class="search-result" href="">
+        <div class="search-result-media">
+            <img src="https://overtime.ru/upload/resize_cache/iblock/df6/340_340_140cd750bba9870f18aada2478b24840a/df649a49b113985f4195ed955efa4b49.jpg" alt="">
+        </div>
+        <span class="search-result-name">Сверло, HSS, 10,0 Alfra арт. 10018</span>
+        <div class="search-result-price">
+            <span>2&nbsp;084.49</span>
+            <span>&nbsp;₽&nbsp;</span>
+            <span>/&nbsp;шт.</span>
+        </div>
+        <div class="search-result-discount">
+            <span>-10%, экономия 12377 ₽</span>
+        </div>
+    </a>
+    <a href="" class="search-results-all">Все результаты
+        <i>
+            <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 6L9.13951e-07 6M20 6L15 11M20 6L15 1" stroke="#F2542C"/>
+            </svg>
+        </i>
+    </a>
+</div>
+
+<ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="">
+            <span itemprop="name">Главная</span></a>
+        <meta itemprop="position" content="1">
+    </li>
+    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="">
+            <span itemprop="name">Каталог Alfra</span></a>
+        <meta itemprop="position" content="2">
+    </li>
+    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Вставка быстросменная, М6, Alfra, арт. 18682</span>
+        <meta itemprop="position" content="3">
+    </li>
+</ol>
+
+<section class="product">
+    <div class="product-name">
+        <h1>Вставка быстросменная, М6, Alfra, арт. 18682</h1>
+    </div>
+    <div class="product-wrap">
+        <div class="product-brand">
+            <a href="#">
+                <img src="assets/img/test-brand.png" alt="Alfra">
+            </a>
+        </div>
+        <div class="product-media">
+            <picture class="project-item-media">
+                <source srcset="assets/img/test-product.png">
+                <img src="assets/img/test-product.png" alt="Вставка быстросменная, М6, Alfra, арт. 18682">
+            </picture>
+        </div>
+        <div class="product-name-m">
+            <h1>Вставка быстросменная, М6, Alfra, арт. 18682</h1>
+        </div>
+        <div class="product-header">
+            <div class="product-sku">
+                <span>Артикул:&nbsp;<strong>0802611</strong></span>
+            </div>
+            <div class="product-store">
+                <span><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.99999 16C3.58427 16 0 12.4087 0 8C0 3.59127 3.59125 0 7.99999 0C12.4087 0 16 3.59127 16 8C16 12.4087 12.4087 16 7.99999 16ZM7.99999 1.32751C4.32488 1.32751 1.32751 4.3179 1.32751 8C1.32751 11.6821 4.31789 14.6725 7.99999 14.6725C11.6821 14.6725 14.6725 11.6821 14.6725 8C14.6725 4.3179 11.6751 1.32751 7.99999 1.32751Z" fill="#239112"/>
+<path d="M6.66364 11.6126L3.51953 8.46852L4.46277 7.53228L6.66364 9.72617L11.5265 4.86328L12.4698 5.80652L6.66364 11.6126Z" fill="#239112"/>
+</svg></i>В наличии:&nbsp;<strong>2</strong></span>
+            </div>
+            <div class="product-cta">
+                <button data-object="modal-trigger" data-modal="consultation">
+                    <span>Консультация</span>
+                </button>
+            </div>
+        </div>
+        <div class="product-price">
+            <div class="product-price-main">
+                <span>2&nbsp;084.49</span>
+                <span>&nbsp;₽&nbsp;</span>
+                <span>/&nbsp;шт.</span>
+            </div>
+            <div class="product-price-currency">
+                <span>~26.02&nbsp;€</span>
+            </div>
+            <div class="product-price-discount">
+                <span>-10%, экономия 12377 ₽</span>
+            </div>
+        </div>
+        <div class="product-info">
+            <div class="info-item">
+                <a href="#" class="info-item-trigger" data-object="trigger">
+                    <i>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="6" fill="#F47352"/>
+                            <path d="M5.92359 2.12109C4.86359 2.12109 4.08359 2.65109 3.68359 3.08109L4.32359 4.20109C4.67359 3.85109 5.17359 3.55109 5.85359 3.55109C6.31359 3.55109 6.72359 3.73109 6.72359 4.18109C6.72359 4.75109 6.21359 5.05109 5.76359 5.51109C5.25359 6.03109 5.26359 6.76109 5.28359 7.08109H6.56359C6.57359 6.45109 6.97359 6.10109 7.28359 5.86109C8.00359 5.30109 8.32359 4.76109 8.32359 4.04109C8.32359 3.07109 7.51359 2.12109 5.92359 2.12109ZM5.92359 7.40109C5.43359 7.40109 5.04359 7.79109 5.04359 8.28109C5.04359 8.77109 5.43359 9.16109 5.92359 9.16109C6.41359 9.16109 6.80359 8.77109 6.80359 8.28109C6.80359 7.79109 6.41359 7.40109 5.92359 7.40109Z" fill="white"/>
+                        </svg>
+                    </i>
+                    <span>Условия приобретения</span>
+                </a>
+                <div class="info-item-content" data-object="content">
+                    <p>Вы можете приобрести оборудование кратно минимальной упаковки. За исключением случаев наличия единичного товара на складе Овертайм.</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <a href="#" class="info-item-trigger" data-object="trigger">
+                    <i>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="6" fill="#F47352"/>
+                            <path d="M5.92359 2.12109C4.86359 2.12109 4.08359 2.65109 3.68359 3.08109L4.32359 4.20109C4.67359 3.85109 5.17359 3.55109 5.85359 3.55109C6.31359 3.55109 6.72359 3.73109 6.72359 4.18109C6.72359 4.75109 6.21359 5.05109 5.76359 5.51109C5.25359 6.03109 5.26359 6.76109 5.28359 7.08109H6.56359C6.57359 6.45109 6.97359 6.10109 7.28359 5.86109C8.00359 5.30109 8.32359 4.76109 8.32359 4.04109C8.32359 3.07109 7.51359 2.12109 5.92359 2.12109ZM5.92359 7.40109C5.43359 7.40109 5.04359 7.79109 5.04359 8.28109C5.04359 8.77109 5.43359 9.16109 5.92359 9.16109C6.41359 9.16109 6.80359 8.77109 6.80359 8.28109C6.80359 7.79109 6.41359 7.40109 5.92359 7.40109Z" fill="white"/>
+                        </svg>
+                    </i>
+                    <span>Сроки поставки</span>
+                </a>
+                <div class="info-item-content" data-object="content">
+                    <p>Вы можете приобрести оборудование кратно минимальной упаковки. За исключением случаев наличия единичного товара на складе Овертайм.</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-quantity">
+            <div class="product-quantity-minus">
+                <i>
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0H0V1.66667H10V0Z" fill="#F5B4A3"/>
+                    </svg>
+                </i>
+            </div>
+            <input type="text" placeholder="1" class="product-quantity-value">
+            <div class="product-quantity-plus">
+                <i>
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0088 4.17578H0V5.84391H10.0088V4.17578Z" fill="#F2542C"/>
+                        <path d="M5.83609 0H4.16797V10H5.83609V0Z" fill="#F2542C"/>
+                    </svg>
+                </i>
+            </div>
+        </div>
+        <div class="product-action">
+            <button class="product-action-add">
+                <span>В корзину</span>
+            </button>
+            <a href="" class="product-action-reduce">Хочу дешевле</a>
+        </div>
+        <div class="product-pros">
+            <div class="product-pros-item">
+                <i>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="20" fill="#EAECEC"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M27.215 24.1034C27.6894 24.1034 28.0675 24.4884 28.0675 24.9559C28.0675 25.4234 27.6894 25.8016 27.215 25.8016C26.7613 25.8016 26.3762 25.4234 26.3762 24.9559C26.3694 24.4884 26.7544 24.1034 27.215 24.1034ZM24.8844 20.3634H29.5456L28.1844 17.6272H24.8844V20.3634ZM30.0544 21.3809H24.8844V24.1309C25.29 24.1791 25.62 24.5297 25.62 24.9628C25.62 25.4028 25.7919 25.8084 26.0875 26.0972L26.0806 26.1041H26.0875C26.3762 26.3997 26.775 26.5716 27.215 26.5716C27.6481 26.5716 28.04 26.3997 28.3288 26.1247L28.3563 26.0972C28.645 25.8153 28.8237 25.4166 28.8306 24.9834V24.9559C28.8306 24.4884 29.2087 24.1034 29.6763 24.1034H30.3088V21.8759L30.0544 21.3809ZM30.405 25.8016C30.2537 26.3722 29.9513 26.8878 29.5525 27.2934L29.5044 27.3347C28.9062 27.9053 28.1019 28.2559 27.215 28.2559C26.3144 28.2559 25.4894 27.8984 24.8981 27.2934H24.8844C24.4788 26.8878 24.19 26.3722 24.0319 25.8016H24.0181H19.0544C18.9031 26.3791 18.6075 26.8878 18.195 27.2934C17.5969 27.8916 16.7787 28.2559 15.8644 28.2559C14.95 28.2559 14.125 27.8984 13.5269 27.2934C13.1281 26.8878 12.8256 26.3722 12.6744 25.8016H10.8456C10.3781 25.8016 10 25.4234 10 24.9559V24.9422V12.5809C10 12.1203 10.3781 11.7422 10.8456 11.7422H10.8731H24.025C24.4994 11.7422 24.8775 12.1203 24.8775 12.5809V12.6153V15.9428H28.6931C29.0506 15.9428 29.3531 16.1559 29.4837 16.4722L31.8969 21.3122C31.9725 21.4291 31.9862 21.5597 31.9862 21.6903H32V24.9559C32 25.4234 31.6287 25.8016 31.1544 25.8016H31.1337H30.405ZM23.1931 13.4334H11.6913V24.1034H13.3963H13.4169C13.8775 24.1034 14.2625 24.4884 14.2625 24.9559C14.2625 25.3959 14.4413 25.8016 14.73 26.0903C15.0256 26.3791 15.4244 26.5647 15.8713 26.5647C16.3112 26.5647 16.71 26.3791 17.0056 26.0903C17.2875 25.8084 17.4662 25.4097 17.4731 24.9766V24.9491C17.4731 24.4816 17.865 24.0966 18.3188 24.0966H23.1931V16.7816V16.7472V13.4334ZM15.8713 24.1034C16.3319 24.1034 16.71 24.4884 16.71 24.9559C16.71 25.4234 16.3319 25.8016 15.8713 25.8016C15.4037 25.8016 15.0256 25.4234 15.0256 24.9559C15.0256 24.4884 15.4037 24.1034 15.8713 24.1034Z" fill="#3B4040"/>
+                    </svg>
+                </i>
+                <strong>Доставка по России</strong>
+                <span>Самовывоз с нашего склада в Санкт-Петербурге, отправка в регионы транспортными компаниями.</span>
+            </div>
+            <div class="product-pros-item">
+                <i>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="20" fill="#EAECEC"/>
+                        <path d="M20.3867 31.9175C20.1736 32.0275 19.8917 32.0344 19.6442 31.9175C13.2848 28.8512 9.55859 21.9625 9.55859 15.0188C9.55859 14.8744 9.55859 14.675 9.57234 14.4C9.57922 14.18 9.58609 13.9669 9.59297 13.8019C9.61359 13.3825 9.92297 13.025 10.3423 12.9769C11.408 12.8463 12.2398 11.9387 12.2398 10.8662V10.8319C12.2398 10.3713 12.618 10 13.0923 10H26.9042H26.9317C27.3992 10 27.7705 10.3713 27.7705 10.8319C27.7705 11.9319 28.5817 12.8463 29.668 12.9838C30.0667 13.0319 30.3898 13.3619 30.4105 13.7744C30.4242 13.9462 30.4311 14.1594 30.438 14.4069C30.4448 14.6819 30.4517 14.8812 30.4517 15.0256C30.4448 21.9625 26.7255 28.8375 20.3867 31.9175ZM24.9655 16.6275C25.3023 16.2906 25.8386 16.2906 26.1686 16.6275C26.4986 16.9506 26.4986 17.4938 26.1686 17.8238L20.0498 23.9425C19.7267 24.2794 19.1836 24.2794 18.8467 23.9425L15.4986 20.5944C15.1686 20.2712 15.1686 19.7281 15.4986 19.3981C15.8286 19.075 16.3648 19.075 16.7086 19.3981L19.4448 22.1412L24.9655 16.6275ZM20.0086 30.2125C25.5636 27.3387 28.7536 21.1788 28.7536 15.0188L28.7467 14.5031C27.4542 14.0906 26.4711 13.0044 26.1617 11.6844H13.8486C13.5461 12.9975 12.5492 14.0838 11.2567 14.5031V15.0188C11.2567 21.1788 14.4467 27.3387 20.0086 30.2125Z" fill="#3B4040"/>
+                    </svg>
+                </i>
+                <strong>Высокая надежность</strong>
+                <span>Высокий рейтинг надежности в работе с клиентами – 97% поставок осуществляется в оговоренные сроки.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="tabs tabs--product">
+    <nav class="tabs-nav">
+        <ol>
+            <li><a href="" data-object="trigger" class="active">Описание</a></li>
+            <li><a href="" data-object="trigger">Характеристики</a></li>
+        </ol>
+    </nav>
+    <div class="tabs-content" data-object="content">
+        <div class="tabs-content-item active">
+            <p>Купить 0802611 Спиральное сверло, Weldon, 11 мм 0802611 Alfra в розницу или оптом можно в нашем интернет-магазине электротехнического оборудования Овертайм или по телефону <a href="">8 (800) 775-47-83</a>. Осуществляем доставку по всей России.</p>
+            <p>Самовывоз возможен со склада по адресу: г. Санкт-Петербург, пром. зона «Парнас», 1-ый Верхний пер., д. 10, лит. А, корп. 3.</p>
+        </div>
+        <div class="tabs-content-item tabs-content-item--props">
+            <table>
+                <tr>
+                    <td><span>Тип</span></td>
+                    <td><span>2</span></td>
+                </tr>
+                <tr>
+                    <td><span>Вставка</span></td>
+                    <td><span>М6</span></td>
+                </tr>
+                <tr>
+                    <td><span>Хвостовик, ø</span></td>
+                    <td><span>6.0</span></td>
+                </tr>
+                <tr>
+                    <td><span>Квадрат</span></td>
+                    <td><span>4.9</span></td>
+                </tr>
+                <tr>
+                    <td><span>Метчик</span></td>
+                    <td><span>DIN 371</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-wrap">
+        <div class="footer-info">
+            <a class="footer-logo">
+                <img src="assets/img/logo.png" alt="Овертайм, электротехническое оборудование для промышленности">
+            </a>
+            <p>Оснащаем российские промышленные предприятия новейшими технологиями автоматизации из Европы.</p>
+            <button class="footer-cta btn btn--gray" data-object="modal-trigger" data-modal="consultation">
+                <span>Задать вопрос</span>
+            </button>
+        </div>
+        <div class="footer-nav">
+            <div class="footer-nav-item">
+                <a href="">Каталог продукции</a>
+                <nav>
+                    <ol>
+                        <li><a href="">Rittal</a></li>
+                        <li><a href="">Alfra</a></li>
+                        <li><a href="">Delta</a></li>
+                        <li><a href="">DKC</a></li>
+                        <li><a href="">Eldon</a></li>
+                        <li><a href="">Vertiv</a></li>
+                        <li><a href="">Sedus</a></li>
+                        <li><a href="">Phoenix Contact</a></li>
+                        <li><a href="">Heitec</a></li>
+                        <li><a href="">Schroff</a></li>
+                        <li><a href="">Remer</a></li>
+                        <li><a href="">Провенто</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="footer-nav-item">
+                <a href="">Помощь</a>
+                <nav>
+                    <ol>
+                        <li><a href="">Способ оплаты</a></li>
+                        <li><a href="">Договор-оферта</a></li>
+                        <li><a href="">Условия доставки</a></li>
+                        <li><a href="">Гарантия на товар</a></li>
+                        <li><a href="">Срок поставки</a></li>
+                        <li><a href="">Карта поставок</a></li>
+                        <li><a href="">Сервис</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="footer-nav-item">
+                <a href="">О компании</a>
+                <nav>
+                    <ol>
+                        <li><a href="">История</a></li>
+                        <li><a href="">Реквизиты</a></li>
+                        <li><a href="">Сертификаты</a></li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Статьи</a></li>
+                        <li><a href="">Электронные каталоги</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="footer-nav-item">
+                <a href="">Контакты</a>
+                <nav>
+                    <ol>
+                        <li><a href="">Санкт-Петербург</a></li>
+                        <li><a href="">Москва</a></li>
+                        <li><a href="">Центральный склад</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <span class="footer-copyright">© 1995-2020  ООО "Овертайм"</span>
+                <a href="" class="footer-gdpr">Обработка персональных данных</a>
+            </div>
+            <div class="footer-payment">
+                <ol>
+                    <li><img src="assets/img/payment-logo/payment-logo-1.svg" alt=""></li>
+                    <li><img src="assets/img/payment-logo/payment-logo-2.svg" alt=""></li>
+                    <li><img src="assets/img/payment-logo/payment-logo-3.svg" alt=""></li>
+                    <li><img src="assets/img/payment-logo/payment-logo-4.svg" alt=""></li>
+                    <li><img src="assets/img/payment-logo/payment-logo-5.svg" alt=""></li>
+                    <li><img src="assets/img/payment-logo/payment-logo-6.svg" alt=""></li>
+                    <li><img src="assets/img/payment-logo/payment-logo-7.svg" alt=""></li>
+                </ol>
+            </div>
+            <a href="" class="footer-dev">Сделано в Texlid</a>
+        </div>
+    </div>
+</footer>
+
+<div id="modal-overlay" class="modal-overlay hidden"></div>
+
+<div class="modal" data-modal="consultation">
+    <div class="modal-close">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L13 13M25 25L13 13M13 13L1 25M13 13L25 1" stroke="#C8D0D0" stroke-width="2"/>
+        </svg>
+    </div>
+    <div class="modal-wrap">
+        <div class="modal-content">
+            <div class="modal-heading">
+                <h2>Заявка на консультацию</h2>
+                <p>Задайте любой вопрос по оборудованию или работе магазина. Мы обязательно вам поможем.</p>
+            </div>
+            <form class="form modal-form">
+                <input class="form-input" name="modal-name" type="text" placeholder="Как вас зовут?">
+                <input class="form-input" name="modal-phone" type="text" placeholder="Контактный телефон">
+                <textarea class="form-textarea" name="modal-question" placeholder="Ваш вопрос"></textarea>
+                <div class="form-footer">
+                    <div class="form-checkbox">
+                        <input id="gdpr-checkbox" type="checkbox">
+                        <label for="gdpr-checkbox">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.2155 16.0492L6 11.8337L7.26464 10.5785L10.2155 13.5199L16.7354 7L18 8.26464L10.2155 16.0492Z" fill="#F2542C"/>
+                            </svg>
+                            </label>
+                        <label for="gdpr-checkbox"><span>Я принимаю <a href="" target="_blank">условия</a> обработки данных</span></label>
+                    </div>
+                    <button class="btn btn--orange btn--lg" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" data-modal="mobile-nav">
+    <div class="modal-close">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L13 13M25 25L13 13M13 13L1 25M13 13L25 1" stroke="#C8D0D0" stroke-width="2"/>
+        </svg>
+    </div>
+    <div class="modal-wrap">
+        <div class="modal-content">
+            <div class="modal-account">
+                <i>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.93178 9.26201C5.38057 9.26201 3.30078 7.18222 3.30078 4.63101C3.30078 2.07979 5.38057 0 7.93178 0C10.483 0 12.5628 2.07979 12.5628 4.63101C12.5628 7.18222 10.483 9.26201 7.93178 9.26201ZM7.93178 1.32413C6.1085 1.32413 4.62492 2.80772 4.62492 4.63101C4.62492 6.45429 6.1085 7.93788 7.93178 7.93788C9.75507 7.93788 11.2386 6.45429 11.2386 4.63101C11.2386 2.80772 9.75507 1.32413 7.93178 1.32413Z" fill="#F2542C"/>
+                        <path d="M14.5586 16.0002L14.302 14.579C13.7405 11.5009 11.0645 9.26163 7.93095 9.26163C4.79739 9.26163 2.12139 11.5009 1.55984 14.579L1.30334 16.0002L0 15.7645L0.256504 14.3433C0.928971 10.6343 4.15959 7.9375 7.93095 7.9375C11.7023 7.9375 14.926 10.6274 15.6054 14.3433L15.8619 15.7645L14.5586 16.0002Z" fill="#F2542C"/>
+                    </svg>
+                </i>
+                <a href="">Вход</a><span>&nbsp;/&nbsp;</span><a href="">Регистрация</a>
+            </div>
+            <div class="modal-nav">
+                <div class="modal-nav-item">
+                    <a href="">Каталог продукции</a>
+                    <nav>
+                        <ol>
+                            <li><a href="">Rittal</a></li>
+                            <li><a href="">Alfra</a></li>
+                            <li><a href="">Delta</a></li>
+                            <li><a href="">DKC</a></li>
+                            <li><a href="">Eldon</a></li>
+                            <li><a href="">Vertiv</a></li>
+                            <li><a href="">Sedus</a></li>
+                            <li><a href="">Phoenix Contact</a></li>
+                            <li><a href="">Heitec</a></li>
+                            <li><a href="">Schroff</a></li>
+                            <li><a href="">Remer</a></li>
+                            <li><a href="">Провенто</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="modal-nav-item">
+                    <a href="">Помощь</a>
+                    <nav>
+                        <ol>
+                            <li><a href="">Способ оплаты</a></li>
+                            <li><a href="">Договор-оферта</a></li>
+                            <li><a href="">Условия доставки</a></li>
+                            <li><a href="">Гарантия на товар</a></li>
+                            <li><a href="">Срок поставки</a></li>
+                            <li><a href="">Карта поставок</a></li>
+                            <li><a href="">Сервис</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="modal-nav-item dropdown" data-object="dropdown">
+                    <a href="" data-object="dropdown-trigger">О компании</a>
+                    <nav data-object="dropdown-content">
+                        <ol>
+                            <li><a href="">История</a></li>
+                            <li><a href="">Реквизиты</a></li>
+                            <li><a href="">Сертификаты</a></li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Статьи</a></li>
+                            <li><a href="">Электронные каталоги</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="modal-nav-item dropdown" data-object="dropdown">
+                    <a href="" data-object="dropdown-trigger">Контакты</a>
+                    <nav data-object="dropdown-content">
+                        <ol>
+                            <li><a href="">Санкт-Петербург</a></li>
+                            <li><a href="">Москва</a></li>
+                            <li><a href="">Центральный склад</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Modal */
+.modal{
+  width:504px;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  background-color:var(--color-white);
+  box-sizing:border-box;
+  padding:114px 56px 0 56px;
+  z-index:110;
+  box-shadow: 0 0 20px #CCCCCC;
+  transform:translateX(calc(100% + 100px));
+  transition:transform .6s ease-in-out;
+  &-close{
+    position:absolute;
+    top:40px;
+    right:56px;
+    cursor:pointer;
+    svg{
+      path{
+        transition:stroke .2s ease-out;
+        stroke:var(--color-gray-100);
+      }
+    }
+    &:hover{
+      svg{
+        path{
+          transition:stroke .2s ease-in;
+          stroke:var(--color-black-400);
+        }
+      }
+    }
+  }
+  &-wrap{}
+  &-content{}
+  &-heading{
+    margin-bottom:42px;
+    h2{
+      margin-bottom:20px;
+      font-size:28px;
+      font-weight:500;
+      line-height:40px;
+    }
+    p{
+      font-size:16px;
+      line-height:24px;
+      color:var(--color-black-400);
+    }
+  }
+  &-form{}
+  &.active{
+    transform:translateX(0);
+  }
+}
+.modal-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:var(--color-gray-200);
+  z-index:100;
+  transition:opacity .15s ease-in;
+  opacity:0;
+  visibility: hidden;
+  &.visible{
+    visibility:visible;
+  }
+  &.active{
+    opacity:.85;
+    transition:opacity .15s ease-out;
+  }
+}
+
+
+@media (max-width:568px){
+  .modal{
+    width:calc(100% - 24px);
+    padding:0 40px 104px 40px;
+    overflow-y:scroll;
+    &-close{
+      top:24px;
+      right:24px;
+      svg{
+        width: 20px;
+        height:20px;
+        path{
+          stroke-width:1.6;
+        }
+      }
+    }
+    &-heading{
+      margin-bottom:40px;
+      h2{
+        margin-bottom:24px;
+        box-sizing:border-box;
+        margin-left:-40px;
+        margin-right:-40px;
+        padding:22px 40px;
+        border-bottom:1px solid var(--color-gray-200);
+        //margin-bottom:20px;
+        font-size:18px;
+        line-height:24px;
+      }
+      p{
+        font-size:14px;
+        line-height:20px;
+        //color:var(--color-black-400);
+      }
+    }
+    &-account{
+      margin-left:-40px;
+      margin-right:-40px;
+      box-sizing:border-box;
+      padding:24px 40px;
+      border-bottom:1px solid var(--color-gray-200);
+      i {
+        margin-right:10px;
+        transform: translateY(3px);
+      }
+      a {
+        display: inline-block;
+        padding-bottom: 2px;
+        line-height: 20px;
+        @include hover-color-orange-100;
+      }
+      span{
+        color:var(--color-black-600);
+      }
+    }
+    &-nav{
+      margin-top:34px;
+    }
+    &-nav-item{
+      display:grid;
+      grid-template-rows:auto;
+      justify-content:start;
+      &.dropdown{
+        & > a{
+          padding-right:16px;
+          position:relative;
+          place-self:start;
+          &:after{
+            width:8px;
+            height:5px;
+            content:"";
+            display:block;
+            position:absolute;
+            top:11px;
+            right:0;
+            background:transparent url("../img/dropdown-chevron.svg") no-repeat;
+          }
+        }
+      }
+      &:not(:last-of-type){
+        margin-bottom:33px;
+      }
+      &:nth-of-type(1){
+        margin-bottom:21px !important;
+        ol{
+          justify-content: start;
+          display:grid;
+          grid-template-columns:repeat(2, auto);
+          column-gap:40px;
+          grid-template-rows:repeat(6,auto);
+        }
+      }
+      & > a{
+        grid-row:1;
+        font-weight:500;
+        line-height:24px;
+        font-size:16px;
+        color:var(--color-orange-100);
+        transition:color .2s ease-out;
+        &:hover{
+          color:var(--color-black-400);
+          transition:color .2s ease-in;
+        }
+      }
+      nav{
+        grid-row:2;
+        display:inline-block;
+        margin-top:19px;
+        ol{
+          li{
+            &:not(:last-of-type){
+              margin-bottom:12px;
+            }
+            a{
+              line-height:20px;
+              transition:color .2s ease-in;
+              &:hover{
+                transition:color .2s ease-out;
+                color:var(--color-orange-100);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

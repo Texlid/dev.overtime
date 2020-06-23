@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "Овертайм",
+  "description": "Овертайм, электротехническое оборудование для промышленности",
+  "icons": {
+    "60": "assets/img/favicon/firefox_app_60x60.png",
+    "128": "assets/img/favicon/firefox_app_128x128.png",
+    "512": "assets/img/favicon/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Texlid",
+    "url": "https://texlid.com/"
+  }
+}

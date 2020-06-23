@@ -1,0 +1,37 @@
+/* Font / noir-pro */
+@font-face {
+  font-family: 'noir-pro';
+  font-style: normal;
+  font-weight: 400;
+  src:  local('noir-pro-regular'),
+        url(../fonts/noir-pro/noir-pro-regular.woff2) format('woff2'),
+        url(../fonts/noir-pro/noir-pro-regular.woff) format('woff'),
+        url(../fonts/noir-pro/noir-pro-regular.otf) format('opentype');
+  font-display:swap;
+}
+
+@font-face {
+  font-family: 'noir-pro';
+  font-style: normal;
+  font-weight: 500;
+  src:  local('noir-pro-medium'),
+        url(../fonts/noir-pro/noir-pro-medium.woff2) format('woff2'),
+        url(../fonts/noir-pro/noir-pro-medium.woff) format('woff'),
+        url(../fonts/noir-pro/noir-pro-medium.otf) format('opentype');
+  font-display:swap;
+}
+
+@font-face {
+  font-family: 'noir-pro';
+  font-style: normal;
+  font-weight: 600;
+  src:  local('noir-pro-semibold'),
+        url(../fonts/noir-pro/noir-pro-semibold.woff2) format('woff2'),
+        url(../fonts/noir-pro/noir-pro-semibold.woff) format('woff'),
+        url(../fonts/noir-pro/noir-pro-semibold.otf) format('opentype');
+  font-display:swap;
+}
+
+:root{
+  --font-noir-pro: 'noir-pro', BlinkMacSystemFont, Segoe UI, Roboto, Cantarell, Helvetica Neue, sans-serif;
+}
